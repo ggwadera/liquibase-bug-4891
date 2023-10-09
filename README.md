@@ -18,7 +18,7 @@ docker run --rm -p 5432:5432 -e POSTGRES_PASSWORD=pw postgres
 2. Run the Spring Boot application with your IDE or with `mvn spring-boot:run`.
    This will update the database with the first changelog.
 
-3. Now uncomment the second `@Bean` annotation, to have both `SpringLiquibase` beans activated, and run the application
+3. Now uncomment the second `@Bean` annotation [here](https://github.com/ggwadera/liquibase-bug-4891/blob/main/src/main/java/com/example/demo/DemoApplication.java#L27), to have both `SpringLiquibase` beans activated, and run the application
    again.
 
 4. This time, the database will already be up-to-date according to the first changelog, and the second changelog will
